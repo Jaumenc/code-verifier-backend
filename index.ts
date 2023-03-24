@@ -20,6 +20,12 @@ app.get('/hello', (req: Request, res: Response) => {
     res.send('Welcome  to GET Route: Hello!');
 }); 
 
+// Define the first Route of APP
+app.get('/goodbye', (req: Request, res: Response) => {
+    //Send goodbye
+    res.send('Goodbye, world');
+}); 
+
 // Execute APP and Listen Requests to PORT
 app.listen(port, () => {
     console.log(`EXPRESS SERVER: Running at http://localhost:${port}`)
