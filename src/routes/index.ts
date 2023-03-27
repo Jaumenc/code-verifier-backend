@@ -5,7 +5,7 @@
 
 import express, { Request, Response } from 'express';
 import helloRouter from './HelloRouter';
-import { LogInfo } from '@/utils/logger';
+import { LogInfo } from '../utils/logger';
 
 // Server instance
 let server = express();
@@ -22,7 +22,6 @@ rootRouter.get('/', (req: Request, res: Response) => {
     // Send Hello World
     res.send('Welcome to API Restful: Express + TS + Nodemon + Jest + Swagger + Mongoose');
 }); 
-
 
 // Redirections to Routers & Controllers
 server.use('/api', rootRouter); // http://localhost:8000/api/
